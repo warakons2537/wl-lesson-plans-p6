@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>สื่อการสอน อ16101 ป.6</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0E6B5A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="สื่อการสอน ป.6">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700&family=Sarabun:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#F1F4F7; --surface:#FFFFFF; --ink:#16202C; --muted:#566275; --line:#D7DDE5; --soft:#E8EDF2;
+  --accent:#0E6B5A; --accent-ink:#FFFFFF; --accent-tint:#DDF0EA;
+  --s1:#B85F12; --s2:#1B67A8; --s3:#1E7F54; --s4:#7048B4; --s5:#4E5A6C;
+  --s1t:#FBEADB; --s2t:#E0EDF8; --s3t:#DDF1E6; --s4t:#EBE3F7; --s5t:#E6EAEF;
+  --kc:#1B67A8; --pc:#1E7F54; --ac:#A93F67;
+  --kt:#E0EDF8; --pt:#DDF1E6; --at:#F8E3EB;
+  --f-head:"Prompt","Sarabun",system-ui,sans-serif; --f-body:"Sarabun","Prompt",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F151C; --surface:#18212B; --ink:#E7ECF2; --muted:#9BA8B9; --line:#2B3744; --soft:#202B37;
+  --accent:#4FC3A9; --accent-ink:#06231D; --accent-tint:#173229;
+  --s1:#F0A464; --s2:#6DB2EC; --s3:#5CCB92; --s4:#B795EE; --s5:#A4B0C2;
+  --s1t:#33261A; --s2t:#16293A; --s3t:#173126; --s4t:#271F3A; --s5t:#222C38;
+  --kc:#6DB2EC; --pc:#5CCB92; --ac:#F08FB1;
+  --kt:#16293A; --pt:#173126; --at:#3A1F2B; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F151C; --surface:#18212B; --ink:#E7ECF2; --muted:#9BA8B9; --line:#2B3744; --soft:#202B37;
+  --accent:#4FC3A9; --accent-ink:#06231D; --accent-tint:#173229;
+  --s1:#F0A464; --s2:#6DB2EC; --s3:#5CCB92; --s4:#B795EE; --s5:#A4B0C2;
+  --s1t:#33261A; --s2t:#16293A; --s3t:#173126; --s4t:#271F3A; --s5t:#222C38;
+  --kc:#6DB2EC; --pc:#5CCB92; --ac:#F08FB1;
+  --kt:#16293A; --pt:#173126; --at:#3A1F2B; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.65;margin:0;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:14px 40px}
+[hidden]{display:none!important}
+.wrap{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+h1,h2,h3{font-family:var(--f-head);margin:0;line-height:1.3;text-wrap:balance}p,ul,ol{margin:0}
+.bar{display:grid;grid-template-columns:44px 1fr 44px;gap:8px;align-items:center}
+select{width:100%;min-width:0;height:44px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font:600 15px var(--f-body);padding:0 10px}
+.nb{height:44px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font:700 18px var(--f-head);cursor:pointer}
+.nb:disabled{opacity:.35;cursor:default}
+button:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.hero{background:var(--accent);color:var(--accent-ink);border-radius:16px;padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.eyebrow{font:600 12px var(--f-head);letter-spacing:.08em;text-transform:uppercase;opacity:.85}
+.hero .id{font:700 36px/1 var(--f-head)}.hero h1{font-size:20px;font-weight:600}
+.back{color:inherit;font-weight:600;font-size:14px;text-underline-offset:3px}
+.seg{display:flex;gap:6px;background:var(--soft);padding:4px;border-radius:12px}
+.seg button{flex:1;min-height:44px;border:0;border-radius:9px;background:transparent;color:var(--ink);font:600 15px var(--f-body);cursor:pointer}
+.seg button.on{background:var(--surface);box-shadow:0 1px 3px rgba(0,0,0,.15);color:var(--accent)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:12px}
+.btn{min-height:46px;border:0;border-radius:11px;background:var(--accent);color:var(--accent-ink);font:700 16px var(--f-body);padding:0 18px;cursor:pointer}
+.btn.alt{background:var(--surface);color:var(--ink);border:1px solid var(--line);font-weight:600}
+.tools,.row{display:flex;gap:8px;flex-wrap:wrap}.tools .btn,.row .btn{flex:1}
+.hint,.gnote{font-size:14px;color:var(--muted)}
+.gnote a{color:var(--accent)}
+/* cards */
+.cgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.fc{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:150px;padding:12px 8px;text-align:center;background:var(--surface);color:var(--ink);border:1.5px solid var(--line);border-radius:14px;cursor:pointer;font-family:var(--f-body)}
+.fc-ic{font-size:44px;line-height:1.1}.fc-en{font:700 18px/1.25 var(--f-head);overflow-wrap:anywhere}.fc-th{font-size:14px;color:var(--muted)}
+.fc.hide .fc-th,.cgrid.noth .fc-th{visibility:hidden}
+/* worksheet */
+.sheet{background:#fff;color:#000;border:1px solid var(--line);border-radius:6px;padding:18px 16px;display:flex;flex-direction:column;gap:14px;font-size:17px}
+.ws-h{display:flex;flex-direction:column;gap:6px;border-bottom:2px solid #000;padding-bottom:8px}.ws-h span{display:block;font-size:13px;color:#444}.nm{font-size:15px}
+.ws-sec h3{font-size:16px;font-weight:700}.ws-i{font-size:14px;color:#333;margin:2px 0 8px}
+.ws-l{padding-left:1.4em;display:flex;flex-direction:column;gap:12px}.ws-l.np{padding-left:0;list-style:none}
+.bank{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}.bank span{border:1.5px solid #000;border-radius:8px;padding:1px 10px;font-weight:600}
+.bl{display:inline-block;min-width:6em;border-bottom:1.5px solid #000;text-align:center;line-height:1.2;vertical-align:baseline}.bl.sm{min-width:2.2em}
+.an{visibility:hidden;color:#c0224f;font-weight:700}.showans .an{visibility:visible}
+.mt{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mt-r{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px}.mt-r b{margin-right:4px}
+.ln{border-bottom:1.5px solid #000;height:34px}.box{border:1.5px solid #000;border-radius:6px}
+.cb{display:inline-block;width:18px;height:18px;border:1.5px solid #000;border-radius:4px;vertical-align:-3px;margin-right:6px}
+.tb{width:100%;border-collapse:collapse}.tb th,.tb td{border:1.5px solid #000;padding:6px;height:48px;font-size:15px;text-align:left}
+.venn{width:100%;max-width:420px;color:#000}
+/* games */
+.gm-info{display:flex;justify-content:space-between;font-size:15px;color:var(--muted)}
+.mem{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.tile{min-height:76px;padding:6px;border:1.5px solid var(--line);border-radius:12px;background:var(--soft);color:var(--ink);font:600 14px/1.25 var(--f-body);cursor:pointer;overflow-wrap:anywhere}
+.tile.on{background:var(--accent-tint);border-color:var(--accent)}.tile.ok{background:var(--s3t);border-color:var(--s3)}
+.win{font:700 20px var(--f-head);color:var(--accent);text-align:center}
+.qq{font:700 20px/1.4 var(--f-head)}.opts{display:grid;gap:8px}
+.opt{min-height:48px;text-align:left;padding:8px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);font:600 16px var(--f-body);cursor:pointer}
+.opt.good{background:var(--s3t);border-color:var(--s3)}.opt.bad{background:var(--at);border-color:var(--ac)}
+.pk{display:flex;flex-direction:column;align-items:center;gap:6px;padding:18px 8px;background:var(--soft);border-radius:14px;text-align:center}
+.pk-ic{font-size:84px;line-height:1.1}.pk-en{font:700 26px var(--f-head)}.pk-th{color:var(--muted)}
+.foot{font-size:13px;color:var(--muted);text-align:center}
+/* deck */
+.deck{position:fixed;inset:0;z-index:50;background:#10161D;color:#fff;display:flex;flex-direction:column}
+.slide{flex:1;display:grid;place-items:center;padding:20px;text-align:center;overflow:auto}
+.sl-in{display:flex;flex-direction:column;align-items:center;gap:14px;max-width:960px}
+.sl-ic{font-size:clamp(80px,22vmin,200px);line-height:1.1}.sl-big{font:700 clamp(30px,8vmin,80px)/1.2 var(--f-head);overflow-wrap:anywhere}
+.sl-sub{font-size:clamp(18px,4vmin,34px);color:#B9C4D2}.sl-id{font:700 clamp(40px,10vmin,90px) var(--f-head);color:#4FC3A9}
+.sl-sent{font:700 clamp(28px,7vmin,64px)/1.35 var(--f-head)}
+.dbar{display:grid;grid-template-columns:56px 1fr 56px 56px;align-items:center;gap:6px;padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px));background:#18212B}
+.dbar button{height:48px;border:0;border-radius:10px;background:#2B3744;color:#fff;font:700 20px var(--f-head);cursor:pointer}.dbar button:disabled{opacity:.3}
+.dcount{text-align:center;font-weight:600;color:#B9C4D2}
+@media (min-width:560px){.cgrid{grid-template-columns:repeat(3,1fr)}.mem{grid-template-columns:repeat(4,1fr)}}
+@media print{
+  body{background:#fff;color:#000;padding:0}.bar,.seg,.tools,.hero,.hint,.foot,.deck,.gnote{display:none!important}
+  .card{border:0;padding:0}.sheet{border:0;padding:0}.an{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .cgrid{grid-template-columns:repeat(3,1fr);gap:0}.fc{border:1px dashed #000;border-radius:0;min-height:6.2cm;break-inside:avoid;color:#000}.fc-th{color:#333}
+  .ws-sec{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="ubar"><select id="unit" aria-label="เลือกยูนิต"></select></div>
+  <nav class="bar" aria-label="เลือกแผน">
+    <button class="nb" id="prev" aria-label="แผนก่อนหน้า">‹</button>
+    <select id="pick" aria-label="เลือกแผนการสอน"></select>
+    <button class="nb" id="next" aria-label="แผนถัดไป">›</button>
+  </nav>
+  <main id="app" class="wrap" style="gap:14px"></main>
+  <p class="foot" id="foot"></p>
+</div>
+<div class="deck" id="deck" hidden role="dialog" aria-label="สไลด์">
+  <div class="slide" id="slide"></div>
+  <div class="dbar"><button data-act="dprev" id="dprev" aria-label="หน้าก่อนหน้า">‹</button><div class="dcount" id="dcount"></div><button data-act="dnext" id="dnext" aria-label="หน้าถัดไป">›</button><button data-act="dclose" aria-label="ปิดสไลด์">✕</button></div>
+</div>
+<script src="media.js"></script>
+</body>
+</html>

@@ -128,7 +128,7 @@ button:focus-visible,select:focus-visible,textarea:focus-visible,input:focus-vis
 </head>
 <body>
 <div class="wrap">
-  <div class="ubar"><select id="unit" aria-label="เลือกยูนิต"></select></div>
+  <div class="ubar" style="display:flex;gap:8px"><select id="unit" aria-label="เลือกยูนิต"></select><a id="mlink" href="media.html" style="flex:none;display:grid;place-items:center;height:44px;padding:0 14px;border-radius:10px;background:var(--accent);color:var(--accent-ink);font:700 15px var(--f-body);text-decoration:none">สื่อการสอน</a></div>
   <nav class="bar" aria-label="เลือกแผน">
     <button class="nb" id="prev" aria-label="แผนก่อนหน้า">‹</button>
     <select id="pick" aria-label="เลือกแผนการสอน"></select>
@@ -138,5 +138,6 @@ button:focus-visible,select:focus-visible,textarea:focus-visible,input:focus-vis
   <p class="foot" id="foot"></p>
 </div>
 <script src="app.js"></script>
+<script>document.getElementById("mlink").addEventListener("click",function(){this.href="media.html"+location.hash})</script>
 </body>
 </html>
