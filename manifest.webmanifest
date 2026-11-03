@@ -1,0 +1,14 @@
+{
+  "name": "แผนสอน อ16101 ภาษาอังกฤษ ป.6",
+  "short_name": "แผนสอน ป.6",
+  "lang": "th",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F1F4F7",
+  "theme_color": "#0E6B5A",
+  "icons": [
+    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}
