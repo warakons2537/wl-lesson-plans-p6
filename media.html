@@ -105,7 +105,7 @@ button:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(
 .dcount{text-align:center;font-weight:600;color:#B9C4D2}
 @media (min-width:560px){.cgrid{grid-template-columns:repeat(3,1fr)}.mem{grid-template-columns:repeat(4,1fr)}}
 @media print{
-  body{background:#fff;color:#000;padding:0}.bar,.seg,.tools,.hero,.hint,.foot,.deck,.gnote{display:none!important}
+  body{background:#fff;color:#000;padding:0}#goback,.bar,.seg,.tools,.hero,.hint,.foot,.deck,.gnote{display:none!important}
   .card{border:0;padding:0}.sheet{border:0;padding:0}.an{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .cgrid{grid-template-columns:repeat(3,1fr);gap:0}.fc{border:1px dashed #000;border-radius:0;min-height:6.2cm;break-inside:avoid;color:#000}.fc-th{color:#333}
   .ws-sec{break-inside:avoid}
@@ -114,6 +114,7 @@ button:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(
 </head>
 <body>
 <div class="wrap">
+  <a id="goback" class="btn alt" href="index.html" style="display:grid;place-items:center;text-decoration:none">‹ ย้อนกลับไปแผนสอน</a>
   <div class="ubar"><select id="unit" aria-label="เลือกยูนิต"></select></div>
   <nav class="bar" aria-label="เลือกแผน">
     <button class="nb" id="prev" aria-label="แผนก่อนหน้า">‹</button>

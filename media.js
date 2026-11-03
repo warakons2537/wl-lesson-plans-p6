@@ -98,6 +98,7 @@ function render(){const{p}=cur();
   $("app").innerHTML=`<header class="hero"><div class="eyebrow">สื่อการสอน · Unit ${U} ${esc(UNITS.find(u=>u[0]===U)[1])}</div><div class="id">${esc(p.id)}</div><h1 lang="en">${esc(p.title)}</h1>
    <a class="back" href="index.html#p${U}-${p.id.split(".")[1]}">เปิดแผนสอน ${esc(p.id)} →</a></header>
    <div class="seg tabs" role="tablist">${tabs.map(t=>`<button role="tab" data-act="tab" data-t="${t[0]}" class="${S.tab===t[0]?"on":""}">${t[1]}</button>`).join("")}</div>${body}`;
+  $("goback").href="index.html#p"+U+"-"+p.id.split(".")[1];
   $("pick").value=S.i;$("prev").disabled=S.i===0;$("next").disabled=S.i===PLANS.length-1;
   document.title="สื่อ "+p.id+" "+p.title}
 function go(i){S.i=Math.max(0,Math.min(PLANS.length-1,i));try{history.replaceState(null,"","#p"+PLANS[S.i].id.replace(".","-"))}catch(e){}render();window.scrollTo(0,0)}
